@@ -2,7 +2,7 @@
 
 ### [Project Page](https://shekshaa.github.io/ResidualMFN/) | [Paper](https://arxiv.org/abs/2206.00746)
 Official PyTorch implementation of Residual MFN.<br>
-
+ 
 [Residual Multiplicative Filter Networks for Multiscale Reconstruction]()<br>
 [Shayan Shekarforoush](https://shekshaa.github.io),
 [David B. Lindell](https://davidlindell.com),
