@@ -20,3 +20,7 @@ conda env list
 
 cd /scratch/network/xs6153/eman2/programs
 python e2proc3d.py /scratch/network/xs6153/resmfndata/results/1oL5_180_epoch25/epoch_24/predicted_vol_scale2.mrc /scratch/network/xs6153/resmfndata/results/10L5_180_align/align.mrc --align rotate_translate_3d_tree --alignref /scratch/network/xs6153/resmfndata/1OL5_180/volume.mrc
+
+# python e2proc3d.py /scratch/network/xs6153/resmfndata/results/10L5_180_epoch25/epoch_24/predicted_vol_scale1.mrc /scratch/network/xs6153/resmfndata/results/10L5_180_align/align_1.mrc --align rotate_translate_3d_tree --alignref /scratch/network/xs6153/resmfndata/1OL5_180/volume.mrc
+
+# python e2proc3d.py /scratch/network/xs6153/resmfndata/results/10L5_180_align/align_0.mrc /scratch/network/xs6153/ResidualMFN/results/10L5_180_fsc/fsc_0.txt --calcfsc /scratch/network/xs6153/resmfndata/1OL5_180/volume.mrc
