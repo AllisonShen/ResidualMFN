@@ -196,8 +196,9 @@ class BACON(nn.Module):
 
 
 class FrequencyMarchingBACON(nn.Module):
-    def __init__(self, in_size, hidden_size, out_size, hidden_layers=3, out_bias=True, frequency=(128, 128), lambdas=(0.3, 2), quantization_interval=2*np.pi, all_out=False, relu=False):
+    def __init__(self, in_size, hidden_size, out_size, hidden_layers=3, out_bias=True, frequency=(128, 128), lambdas=(0.3, 2), quantization_interval=2*np.pi, all_out=False, relu=False, gabor= False):
         super().__init__()
+        self.gabor = gabor
         self.quantization_interval = quantization_interval
         self.hidden_layers = hidden_layers
         self.frequency = frequency

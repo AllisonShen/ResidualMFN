@@ -373,7 +373,7 @@ dependencies:
     - certifi==2021.10.8
     - debugpy==1.5.1
     - dill==0.3.4
-    - dm-haiku==0.0.7.dev0
+    - dm-haiku==0.0.7
     - flatbuffers==2.0
     - flow-vis==0.1
     - fonttools==4.28.3
@@ -387,15 +387,16 @@ dependencies:
     - ipykernel==6.5.0
     - ipython==7.29.0
     - jax==0.3.1
-    - jaxlib==0.3.0+cuda11.cudnn82
+    # - jaxlib==0.3.0+cuda11.cudnn82
     - jmp==0.0.2
     - jupyterlab-widgets==1.0.0
-    - kornia==0.5.5
+    # - kornia==0.5.5
     - lpips==0.1.4
     - matplotlib==3.5.1
     - matplotlib-inline==0.1.3
     - nglview==3.0.3
-    - numpy==1.22.3
+    # - numpy==1.22.3
+    - numpy==1.19.5
     - nvidia-ml-py3==7.352.0
     - oauthlib==3.1.1
     - opencv-python==4.5.3.56

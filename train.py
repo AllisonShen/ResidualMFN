@@ -43,11 +43,9 @@ if __name__ == "__main__":
     use_cuda = torch.cuda.is_available()
     device = torch.device('cuda' if use_cuda else 'cpu')
     n_gpu = torch.cuda.device_count()
-    # print the number of gpu
-    print(f"Using {n_gpu} GPUs")
 
-    train_schedule = [15, 30] # pdb1ol5
-    # train_schedule = [25, 50] # pdb4ake
+    # train_schedule = [15, 30] # pdb1ol5
+    train_schedule = [25, 50] # pdb4ake
     
     logs_path = args.outdir
     writer = SummaryWriter(os.path.join(logs_path, "summaries"))
@@ -56,10 +54,6 @@ if __name__ == "__main__":
     apix = particle_images_dataset.apix
     sidelen = particle_images_dataset.sidelen
     batch_size = 600
-    # batch_size = 32
-    # batch_size = 16
-
-
     particle_images = DataLoader(particle_images_dataset, batch_size=batch_size, shuffle=True)
 
     tensor_gt_rotations = torch.tensor(particle_images_dataset.rotations).float()
@@ -71,8 +65,7 @@ if __name__ == "__main__":
                         n_data=particle_images_dataset.n_projections,
                         gt_rotations=tensor_gt_rotations,
                         g_dist=g_dist,
-                        apix=apix,
-                        gabor=False)
+                        apix=apix)
     optim1 = torch.optim.Adam(lr=args.bacon_lr, params=list(model.model.parameters()))
     optim2 = torch.optim.Adam(lr=args.pose_lr, betas=(args.pose_beta1, args.pose_beta2), 
                                 params=list(filter(lambda p: p.requires_grad, model.poses.parameters())))
